@@ -1,39 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
 :root {
-  --primary-color: #0077cc;
-  --dark-bg: #333;
-  --light-bg: #f9f9f9;
-  --text-color: #222;
+  --primary: #00bcd4;
+  --accent: #673ab7;
+  --dark: #111;
+  --light: #1c1c1c;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --about-text-color: #e0e0e0;
+  --about-text-color-dark: #ffffff;
+  --contact-text-color: #222;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, #1a237e, #311b92);
+  color: var(--dark);
+  scroll-behavior: smooth;
   line-height: 1.6;
-  background-color: var(--light-bg);
-  color: var(--text-color);
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
-  padding: 15px;
+  padding: 20px;
+  color: ghostwhite ;
 }
 
 nav {
-  background: var(--dark-bg);
-  color: white;
-  padding: 10px 0;
+  background: #222;
+  box-shadow: 0 2px 6px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
 }
 
 nav ul {
@@ -43,62 +59,213 @@ nav ul {
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
-  transition: color 0.3s;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: var(--primary-color);
+  color: var(--accent);
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
 }
 
 .hero {
-  background: var(--primary-color);
+  background: linear-gradient(120deg, #512da8, #00bcd4);
   color: white;
-  padding: 40px 15px;
+  padding: 80px 20px;
   text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero span {
+  font-weight: 800;
+  background: linear-gradient(to right, #fff, #ddd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--primary);
 }
 
 .section {
-  padding: 30px 15px;
+  padding: 60px 20px;
+  border-bottom: 2px dashed var(--accent);
 }
 
-h2 {
-  margin-bottom: 15px;
-  color: var(--primary-color);
-  font-size: 1.8em;
+.section h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  position: relative;
 }
 
-.skills-grid {
+.skills-grid,
+.project-cards,
+.certification-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.skills-grid div,
+.card,
+.cert-card {
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px var(--shadow);
+  transition: 0.3s;
+  color: #fff;
 }
 
 .skills-grid div {
-  background: white;
-  padding: 12px;
-  border: 1px solid #ccc;
+  border-left: 4px solid var(--primary);
   text-align: center;
-  border-radius: 5px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-ul {
-  list-style: square inside;
-  line-height: 1.6;
-  padding-left: 0;
+.skills-grid div:hover,
+.card:hover,
+.cert-card:hover {
+  transform: translateY(-5px);
 }
 
-a {
-  color: var(--primary-color);
+.card h3,
+.cert-card h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 2;
+  color: var(--about-text-color);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  transition: color 0.3s ease;
+}
+
+body.dark .about-text {
+  color: var(--about-text-color-dark);
+}
+
+.about-img {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 4px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+#contact {
+  color: var(--contact-text-color);
+}
+
+body.dark #contact {
+  color: #f1f1f1;
+}
+
+#contact a {
+  color: var(--primary);
   text-decoration: none;
 }
 
+body.dark #contact a {
+  color: #90caf9;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 footer {
-  text-align: center;
-  padding: 10px 0;
-  background: var(--dark-bg);
+  background: #000;
   color: white;
+  text-align: center;
+  padding: 20px;
   font-size: 14px;
+  margin-top: 20px;
+}
+
+body.dark {
+  background-color: #111;
+  color: #eee;
+}
+
+body.dark nav {
+  background-color: #1c1c1c;
+}
+
+body.dark .logo,
+body.dark nav ul li a {
+  color: #eee;
+}
+
+body.dark .hero {
+  background: linear-gradient(120deg, #333, #555);
+  color: white;
+}
+
+body.dark .skills-grid div,
+body.dark .card,
+body.dark .cert-card {
+  background-color: #1e1e1e;
+  color: white;
+  border-left-color: var(--accent);
+}
+
+body.dark footer {
+  background: #000;
 }

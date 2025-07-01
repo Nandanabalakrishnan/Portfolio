@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nandana | Portfolio</title>
+  <title>Nandana Balakrishnan | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav>
@@ -14,25 +15,38 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button id="theme-toggle">🌙</button>
     </div>
   </nav>
 
   <header class="hero">
     <div class="container">
-      <h2 style="color: white;">Hello, I'm Nandana 👋</h2>
+      <h2>Hello, I'm <span>Nandana </span></h2>
       <p>An AI & ML Enthusiast | Web Developer</p>
+      <a href="resume.pdf" class="btn" download>Download Resume</a>
     </div>
   </header>
 
   <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I'm a third-year engineering student passionate about Artificial Intelligence, Machine Learning, and Web Development. I enjoy solving problems, building user-friendly websites, and exploring data-driven solutions.
-        I'm a quick learner, a team player, and constantly explore new tools, frameworks, and open-source contributions.
-        Currently, I'm building a responsive AI Dashboard for interns and honing my front-end skills. My goal is to build intelligent, scalable solutions that make a meaningful impact.
-      </p>
+    <div class="container about-container">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I’m a motivated and curious third-year college student with a deep interest in Artificial Intelligence, Machine Learning, and Web Development. I enjoy turning ideas into practical solutions—whether it’s building intelligent systems, designing responsive web interfaces, or analyzing data to uncover insights.
+        </p>
+        <p>
+          My technical toolkit includes strong proficiency in Python, along with hands-on experience in tools and frameworks commonly used in AI and web technologies. I’ve worked on multiple academic and personal projects that reflect both my technical skills and creativity.
+        </p>
+        <p>
+          I’m constantly looking for new opportunities to learn, collaborate, and apply my knowledge to solve real-world challenges. My goal is to grow as a developer while contributing meaningfully to innovative and impactful projects.
+        </p>
+      </div>
+      <div class="about-img">
+        <img src="profile1.jpg" alt="Nandana's Photo">
+      </div>
     </div>
   </section>
 
@@ -40,37 +54,86 @@
     <div class="container">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <div>HTML & CSS</div>
         <div>Python</div>
         <div>Machine Learning</div>
-        <div>Artificial Intelligence</div>
+        <div>Deep Learning</div>
+        <div>HTML & CSS</div>
         <div>JavaScript</div>
         <div>Git & GitHub</div>
       </div>
     </div>
   </section>
+
   <section id="projects" class="section">
-      <div class="container">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Voice Gender Recognition System</strong> – Classifies voice as male or female using ML and audio features.</li>
-            <li><strong>Fraud Detection System</strong> – Detects fraudulent transactions using Decision Trees and Random Forest models.</li>
-            <li><strong>Personalized Nutritional Recommendation System</strong> – Suggests customized diet plans based on user health data and ML analysis.</li>
-        </ul>
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <div class="card">
+          <h3>🎤 Voice Gender Recognition System</h3>
+          <p>Developed using Librosa and Scikit-learn to classify voice as male or female with 90% accuracy. Integrated real-time prediction interface.</p>
+        </div>
+        <div class="card">
+          <h3>🔍 Fraud Detection System</h3>
+          <p>Built with Decision Trees and Random Forest to detect e-commerce fraud. Deployed as a web app for real-time transaction monitoring.</p>
+        </div>
+        <div class="card">
+          <h3>🥗 Nutritional Recommendation System</h3>
+          <p>Machine learning-based diet suggestion system using user inputs like age, BMI, and goals. Included data visualization and insights.</p>
+        </div>
+        <div class="card">
+          <h3>💰 Personal Finance Management</h3>
+          <p>Used Firefly III on Raspberry Pi to track expenses and budgets via a local web dashboard securely.</p>
+        </div>
+        <div class="card">
+          <h3>🎵 Vibe Harmony (Music Web App)</h3>
+          <p>Responsive web app that suggests songs based on mood and language using HTML, CSS, JS & Bootstrap.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="section">
+    <div class="container">
+      <h2>Certifications</h2>
+      <div class="certification-cards">
+        <div class="cert-card">
+          <h3>🎓 Artificial Intelligence – Corizo</h3>
+          <p>Covered Neural Networks, NLP, and Deep Learning fundamentals.</p>
+        </div>
+        <div class="cert-card">
+          <h3>💻 Web Development – Corizo</h3>
+          <p>Hands-on experience building responsive and interactive websites.</p>
+        </div>
+        <div class="cert-card">
+          <h3>🤖 Machine Learning – Corizo</h3>
+          <p>Practical ML algorithms and model-building techniques.</p>
+        </div>
+        <div class="cert-card">
+          <h3>🧠 Deep Learning for NLP – NPTEL</h3>
+          <p>Studied RNNs, LSTMs, and Transformers for advanced NLP tasks.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="contact" class="section">
     <div class="container">
       <h2>Contact</h2>
       <p>Email: nandanabalakrishnan07@gmail.com</p>
-      <p>GitHub: <a href="https://github.com/NandanaBalakrishnan" target="_blank">github.com/yourusername</a></p>
+      <p>GitHub: <a href="https://github.com/NandanaBalakrishnan" target="_blank">github.com/NandanaBalakrishnan</a></p>
+      <p>Phone: 8971324715</p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Nandana Balakrishnan | All Rights Reserved</p>
+    <p>© 2025 Nandana Balakrishnan | All Rights Reserved</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById("theme-toggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
 </body>
 </html>
-
