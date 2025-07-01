@@ -95,6 +95,8 @@ nav ul li a:hover {
   background: linear-gradient(to right, #fff, #ddd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
+
 }
 
 .hero p {
